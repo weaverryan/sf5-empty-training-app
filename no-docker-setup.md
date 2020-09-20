@@ -22,7 +22,7 @@ composer install
 ### 3) Database Checks
 
 Make sure you have MySQL running and have the `pdo_mysql`. The app
-doesn't have any database logic yet - but it wil later. 
+doesn't have any database logic yet - but it will later. 
 
 ### 4) Start the web server
 
