@@ -1,8 +1,12 @@
-app_lucky_number:
-    path: /lucky/number/{max<\d+>}
-    controller: App\Controller\LuckyController::number
-    defaults:
-        max: 100
+# not a route - this imports another file
+#this_does_not_matter:
+#    resource: routes_api.yaml
+
+#app_lucky_number:
+#    path: /lucky/number/{max<\d+>}
+#    controller: App\Controller\LuckyController::number
+#    defaults:
+#        max: 100
 
 api_lucky_number:
     path: /api/lucky/number/{max<\d+>}
