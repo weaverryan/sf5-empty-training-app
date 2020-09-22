@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title -%}
+    {{ parent() }}
+    Lucky Number
+{%- endblock %}
+
+{% block body %}
+    Your lucky number is {{ number }}
+{% endblock %}
+
+{#
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="/css/lucky-number.css">
+{% endblock %}
+#}

@@ -29,3 +29,12 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Controller\LuckyController:
+        arguments:
+            $logger: '@logger'
+            $luckyNumberGenerator: '@App\Service\LuckyNumberGenerator'
+
+    App\Service\LuckyNumberGenerator:
+        arguments:
+            $globalMinNumber: 10
