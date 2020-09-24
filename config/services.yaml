@@ -45,9 +45,35 @@ services:
             # $luckyNumberGenerator: '@App\Service\LuckyNumberGenerator'
 
 #    App\Service\LuckyNumberGenerator:
+#        arguments:
+#            $nameOfArg: 7
 #        calls:
 #            - method: setLogger
 #              arguments: []
 
-#    App\Twig\LuckyNumberExtension:
-#        tags: ['twig.extension']
+#    App\Http\SomeApiClient:
+#        arguments:
+#            # $_SERVER['THE_API_SECRET']
+#            # $apiKey: '%env(THE_API_SECRET)%'
+#            #$apiKey: '%api_key%'
+
+#    products_pdo:
+#        class: 'PDO'
+#        arguments: ['sqlite:///var/www/var/data.db']
+#        calls:
+#            - setAttribute: [3, 2]
+
+#    App\Repository\ProductRepository:
+#        arguments:
+#            $pdo: '@products_pdo'
+
+    PDO:
+        class: 'PDO'
+        arguments: ['sqlite:///var/www/var/data.db']
+        calls:
+            - setAttribute: [3, 2]
+            #- setAttribute: ['@=constant("PDO", "ATTR_ERRMODE")']
+
+#    PDO:
+#        class: 'PDO'
+#        factory: 'App\Factory\PDOFactory::createPdo'

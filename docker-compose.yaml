@@ -17,8 +17,8 @@ services:
         depends_on:
             - database
         environment:
-            - APP_ENV=${APP_ENV}
-            - APP_SECRET=${APP_SECRET}
+#            - APP_ENV=${APP_ENV}
+#            - APP_SECRET=${APP_SECRET}
             - DATABASE_URL=mysql://root:@database:3306/main
         volumes:
             - ./:/var/www:cached
