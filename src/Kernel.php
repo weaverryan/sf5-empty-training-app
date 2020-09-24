@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Controller\LuckyController;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
@@ -28,6 +29,10 @@ class Kernel extends BaseKernel
     {
         $routes->import('../config/{routes}/'.$this->environment.'/*.yaml');
         $routes->import('../config/{routes}/*.yaml');
+
+//        $routes->add('app_foo', '/foo')
+//            ->controller(LuckyController::class.'::fooBar')
+//            ->methods(['GET']);
 
         if (is_file(\dirname(__DIR__).'/config/routes.yaml')) {
             $routes->import('../config/{routes}.yaml');
