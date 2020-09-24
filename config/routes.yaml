@@ -14,6 +14,9 @@ api_lucky_number:
     defaults:
         max: 100
 
+app_foo:
+    path: /foo
+    controller: App\Controller\FooController
 
 #    requirements:
 #        max: '\d+'

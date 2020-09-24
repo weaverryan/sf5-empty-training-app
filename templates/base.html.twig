@@ -8,6 +8,9 @@
         {% endblock %}
     </head>
     <body>
+        <div style="background: #efefef; padding: 5px;">
+            Lucky Number: {{ get_lucky_number() }}
+        </div>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
