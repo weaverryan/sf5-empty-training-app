@@ -1,4 +1,8 @@
 # see https://symfony.com/doc/current/reference/configuration/framework.html
+
+parameters:
+    '%env(APP_SECRET)%': 'not secret'
+
 framework:
     secret: '%env(APP_SECRET)%'
     #csrf_protection: true
@@ -8,7 +12,7 @@ framework:
     # Remove or comment this section to explicitly disable session support.
     session:
         handler_id: null
-        cookie_secure: auto
+        cookie_secure: false
         cookie_samesite: lax
 
     #esi: true

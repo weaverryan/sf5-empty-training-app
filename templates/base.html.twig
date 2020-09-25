@@ -10,6 +10,8 @@
     <body>
         <div style="background: #efefef; padding: 5px;">
             Lucky Number: {{ get_lucky_number() }}
+
+            <a href="{{ path('app_logout') }}">Log out</a>
         </div>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}

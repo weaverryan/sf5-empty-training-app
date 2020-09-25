@@ -69,7 +69,7 @@ services:
 
     PDO:
         class: 'PDO'
-        arguments: ['sqlite:///var/www/var/data.db']
+        arguments: ['%env(DATABASE_URL)%']
         calls:
             - setAttribute: [3, 2]
             #- setAttribute: ['@=constant("PDO", "ATTR_ERRMODE")']
