@@ -2,8 +2,17 @@
 
 namespace App\Model;
 
+use ApiPlatform\Core\Annotation\ApiProperty;
+use ApiPlatform\Core\Annotation\ApiResource;
+
+/**
+ * @ApiResource()
+ */
 class Product
 {
+    /**
+     * @ApiProperty(identifier=true)
+     */
     private $id;
 
     private $name;
